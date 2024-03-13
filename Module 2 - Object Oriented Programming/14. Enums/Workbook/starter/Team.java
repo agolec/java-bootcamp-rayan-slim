@@ -28,7 +28,9 @@ public class Team {
     }
 
     public void setPlayer(Position position, String player) {
-
+        if(position == null){
+            throw new IllegalArgumentException("Position cannot be null.");
+        }
         this.players.put(position, player);
     }
     
