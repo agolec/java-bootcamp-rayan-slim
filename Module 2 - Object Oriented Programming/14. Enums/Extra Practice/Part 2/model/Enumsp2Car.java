@@ -1,6 +1,6 @@
 package model;
 
-public class Car {
+public class Enumsp2Car {
     private String make;
     private String model;
     private BodyType bodyType;
@@ -8,19 +8,25 @@ public class Car {
     private double price;
 
     public static final int MIN_YEAR = 1900;
-    public static final double MIN_PRICE = 0;
     public static final double MAX_PRICE = 200_000;
 
     public enum BodyType {
         SEDAN, COUPE, HATCHBACK, SUV, TRUCK, VAN
     }
 
-    public Car(String make, String model, BodyType bodyType, int productionYear, double price) {
+    public Enumsp2Car(String make, String model, BodyType bodyType, int productionYear, double price) {
         setMake(make);
         setModel(model);
         setBodyType(bodyType);
         setProductionYear(productionYear);
         setPrice(price);
+    }
+    public Enumsp2Car(Enumsp2Car source){
+        this.setMake(source.getMake());
+        this.setModel(source.getModel());
+        this.setBodyType(source.getBodyType());
+        this.setProductionYear(source.getProductionYear());
+        this.setPrice(source.getPrice());
     }
 
     public String getMake() {
@@ -72,7 +78,7 @@ public class Car {
     }
 
     public void setPrice(double price) {
-        if (price < MIN_PRICE || price > MAX_PRICE) {
+        if (price < 0 || price > MAX_PRICE) {
             throw new IllegalArgumentException("Price must be within a valid range.");
         }
         this.price = price;
