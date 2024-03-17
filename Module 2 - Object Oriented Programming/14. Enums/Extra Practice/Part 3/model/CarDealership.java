@@ -3,22 +3,22 @@ package model;
 import java.util.ArrayList;
 
 public class CarDealership {
-    private ArrayList<Car> cars;
+    private ArrayList<EnumPt3ModelCar> enumsPt1Cars;
 
     public CarDealership() {
-        cars = new ArrayList<>();
+        enumsPt1Cars = new ArrayList<>();
     }
 
-    public Car getCar(int index) {
-        Car car = cars.get(index);
-        return new Car(car);
+    public EnumPt3ModelCar getCar(int index) {
+        EnumPt3ModelCar enumsPt3Car = enumsPt1Cars.get(index);
+        return new EnumPt3ModelCar(enumsPt3Car);
     }
 
-    public void setCar(Car car, int index) {
-        cars.set(index, new Car(car));
+    public void setCar(EnumPt3ModelCar enumsPt3Car, int index) {
+        enumsPt1Cars.set(index, new EnumPt3ModelCar(enumsPt3Car));
     }
 
-    public void addCar(Car car) {
-        cars.add(new Car(car));
+    public void addCar(EnumPt3ModelCar enumsPt3Car) {
+        enumsPt1Cars.add(new EnumPt3ModelCar(enumsPt3Car));
     }
 }

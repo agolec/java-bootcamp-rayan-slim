@@ -1,6 +1,6 @@
 package model;
 
-public class Car {
+public class EnumPt3ModelCar {
     private String make;
     private String model;
     private BodyType bodyType;
@@ -15,7 +15,7 @@ public class Car {
         SEDAN, COUPE, HATCHBACK, SUV, TRUCK, VAN
     }
 
-    public Car(String make, String model, BodyType bodyType, int productionYear, double price) {
+    public EnumPt3ModelCar(String make, String model, BodyType bodyType, int productionYear, double price) {
         setMake(make);
         setModel(model);
         setBodyType(bodyType);
@@ -23,12 +23,12 @@ public class Car {
         setPrice(price);
     }
 
-    public Car(Car source) {
-        setMake(source.make);
-        setModel(source.model);
-        setBodyType(source.bodyType);
-        setProductionYear(source.productionYear);
-        setPrice(source.price);
+    public EnumPt3ModelCar(EnumPt3ModelCar source) {
+        setMake(source.getMake());
+        setModel(source.getModel());
+        setBodyType(source.getBodyType());
+        setProductionYear(source.getProductionYear());
+        setPrice(source.getPrice());
     }
 
     public String getMake() {
