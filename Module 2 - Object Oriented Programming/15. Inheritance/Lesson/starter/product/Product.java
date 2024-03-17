@@ -4,8 +4,10 @@ public class Product {
     private double price;
     private String color;
     private String brand;
-    Product(){
-
+    Product(double price, String color, String brand){
+        setPrice(price);
+        setColor(color);
+        setBrand(brand);
     }
     public void setPrice(double price) {
         this.price = price;

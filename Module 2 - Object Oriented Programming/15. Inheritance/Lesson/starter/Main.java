@@ -1,26 +1,23 @@
 import product.Pants;
+import product.Product;
 import product.Shirt;
 
 public class Main {
 
     public static void main(String[] args) {
-    Shirt shirt = new Shirt();
-    shirt.setBrand("Nikes");
-    shirt.setPrice(3.44);
-    shirt.setSize(Shirt.Size.LARGE);
-    shirt.setColor("Blue");
-    shirt.fold();
+    Shirt shirt = new Shirt(20.00,"green", "fall creek", Shirt.Size.LARGE);
+   shirt.fold();
+   productStore(shirt);
 
-    Pants pants = new Pants();
-    pants.setBrand("Levi");
-    pants.setColor("Green");
-    pants.setLength(32);
-    pants.setWaist(30);
-    pants.setPrice(79.99);
-    pants.fold();
+   Pants pants = new Pants(30.00,"black","Lees" ,32, 30);
+   pants.fold();
+   productStore(pants);
+
 
 
 
     }
-
+public static void productStore(Product product){
+    System.out.println("Thank you for purchasing " + product.getBrand() + " " + product.getClass().getSimpleName() + " of price $" + product.getPrice() );
+}
 }
