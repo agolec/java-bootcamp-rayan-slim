@@ -1,23 +1,12 @@
-package model;
+import model.InheritanceEPpt1LabEquipment;
 
-public class Centrifuge extends LabEquipment {
+public class Centrifuge extends InheritanceEPpt1LabEquipment {
     private int maxRPM;
-
-    public static final int MIN_RPM = 500;
-
+    private static final int MINIMUM_VALID_RPM = 500;
     public Centrifuge(String manufacturer, String model, int year, int maxRPM) {
         super(manufacturer, model, year);
         setMaxRPM(maxRPM);
-    }
 
-    public Centrifuge(Centrifuge source) {
-        super(source);
-        setMaxRPM(source.maxRPM);
-    }
-
-    @Override
-    public LabEquipment clone() {
-        return new Centrifuge(this);
     }
 
     public int getMaxRPM() {
@@ -25,8 +14,8 @@ public class Centrifuge extends LabEquipment {
     }
 
     public void setMaxRPM(int maxRPM) {
-        if (maxRPM < MIN_RPM) {
-            throw new IllegalArgumentException("Max RPM must be greater than or equal to the minimum RPM.");
+        if(maxRPM <MINIMUM_VALID_RPM){
+            throw new IllegalArgumentException("Max RPM must be greater than or equal to minimum valid RPM.");
         }
         this.maxRPM = maxRPM;
     }

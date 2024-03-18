@@ -1,6 +1,6 @@
 package model;
 
-public class Microscope extends LabEquipment {
+public class Microscope extends InheritanceEPpt1LabEquipment {
     private int magnification;
 
     public static final int MIN_MAGNIFICATION = 1;

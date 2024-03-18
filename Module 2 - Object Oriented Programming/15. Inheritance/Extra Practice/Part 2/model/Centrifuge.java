@@ -1,6 +1,6 @@
 package model;
 
-public class Centrifuge extends LabEquipment {
+public class Centrifuge extends InheritanceEPpt1LabEquipment {
     private int maxRPM;
 
     public static final int MIN_RPM = 500;

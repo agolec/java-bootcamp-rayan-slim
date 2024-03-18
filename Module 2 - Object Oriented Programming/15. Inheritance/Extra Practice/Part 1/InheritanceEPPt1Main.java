@@ -1,7 +1,4 @@
-import model.Centrifuge;
-import model.Microscope;
-
-public class Main {
+public class InheritanceEPPt1Main {
     public static void main(String[] args) {
         Microscope microscope = new Microscope("Nikon", "E200", 2021, 1000);
         System.out.println("Microscope Details:");
@@ -10,7 +7,10 @@ public class Main {
         System.out.println("Year: " + microscope.getYear());
         System.out.println("Magnification: " + microscope.getMagnification());
         System.out.println("Maintenance: " + microscope.performMaintenance());
+
+
         System.out.println();
+
 
         Centrifuge centrifuge = new Centrifuge("Eppendorf", "5424R", 2020, 15000);
         System.out.println("Centrifuge Details:");
@@ -19,5 +19,6 @@ public class Main {
         System.out.println("Year: " + centrifuge.getYear());
         System.out.println("Max RPM: " + centrifuge.getMaxRPM());
         System.out.println("Maintenance: " + centrifuge.performMaintenance());
+
     }
 }
