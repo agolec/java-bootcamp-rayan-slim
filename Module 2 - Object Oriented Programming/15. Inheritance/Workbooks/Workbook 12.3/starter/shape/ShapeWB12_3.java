@@ -1,12 +1,12 @@
 package shape;
 
-public abstract class Shape {
+public abstract class ShapeWB12_3 {
     
     private double radius;
 
-    public Shape(double radius) {
+    public ShapeWB12_3(double radius) {
         this.radius = radius;
-    } 
+    }
 
     public double getRadius() {
         return this.radius;
@@ -15,8 +15,8 @@ public abstract class Shape {
     public void setRadius(double radius) {
         this.radius = radius;
     }
-
     public abstract double getArea();
     public abstract double getVolume();
+
 
 }

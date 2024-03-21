@@ -9,6 +9,10 @@ public class Microscope extends LabEquipment {
         super(manufacturer, model, year);
         setMagnification(magnification);
     }
+    public Microscope(Microscope source){
+        super(source);
+        setMagnification(source.getMagnification());
+    }
 
     public int getMagnification() {
         return magnification;
@@ -19,6 +23,11 @@ public class Microscope extends LabEquipment {
             throw new IllegalArgumentException("Magnification must be greater than or equal to the minimum magnification.");
         }
         this.magnification = magnification;
+    }
+
+    @Override
+    public LabEquipment clone() {
+        return new Microscope(this);
     }
 
     @Override

@@ -1,9 +1,12 @@
 package shape;
 
-public class Cylinder {
+public class StarterShapeCylinder extends StarterShapeShape{
 
     private double height;
-    private double radius;
+    public StarterShapeCylinder(double radius, double height){
+        super(radius);
+        this.setHeight(height);
+    }
 
     public double getHeight() {
         return this.height;
@@ -13,13 +16,7 @@ public class Cylinder {
         this.height = height;
     }
 
-    public double getRadius() {
-        return this.radius;
-    }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
   
 }
   

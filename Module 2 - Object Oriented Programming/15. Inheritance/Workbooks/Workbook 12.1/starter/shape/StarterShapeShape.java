@@ -1,8 +1,10 @@
 package shape;
 
-public class Shape {    
-
-    private double radius;   
+public class StarterShapeShape {
+    private double radius;
+    StarterShapeShape(double radius){
+        this.radius = radius;
+    }
 
     public double getRadius() {
         return this.radius;
@@ -11,7 +13,5 @@ public class Shape {
     public void setRadius(double radius) {
         this.radius = radius;
     }
-    
-    
 
 }
