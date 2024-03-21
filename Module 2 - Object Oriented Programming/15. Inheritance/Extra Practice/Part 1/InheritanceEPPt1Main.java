@@ -9,6 +9,7 @@ public class InheritanceEPPt1Main {
         System.out.println("Maintenance: " + microscope.performMaintenance());
 
 
+
         System.out.println();
 
 

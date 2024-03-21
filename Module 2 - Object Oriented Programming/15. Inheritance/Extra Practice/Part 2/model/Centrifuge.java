@@ -1,6 +1,6 @@
 package model;
 
-public class Centrifuge extends InheritanceEPpt1LabEquipment {
+public class Centrifuge extends LabEquipment {
     private int maxRPM;
 
     public static final int MIN_RPM = 500;
@@ -8,6 +8,14 @@ public class Centrifuge extends InheritanceEPpt1LabEquipment {
     public Centrifuge(String manufacturer, String model, int year, int maxRPM) {
         super(manufacturer, model, year);
         setMaxRPM(maxRPM);
+    }
+    public Centrifuge(Centrifuge source){
+        super(source);
+        setMaxRPM(source.getMaxRPM());
+    }
+    @Override
+    public LabEquipment clone(){
+        return new Centrifuge(this);
     }
 
     public int getMaxRPM() {

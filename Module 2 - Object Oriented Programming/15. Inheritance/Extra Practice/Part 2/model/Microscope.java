@@ -1,6 +1,6 @@
 package model;
 
-public class Microscope extends InheritanceEPpt1LabEquipment {
+public class Microscope extends LabEquipment {
     private int magnification;
 
     public static final int MIN_MAGNIFICATION = 1;
@@ -8,6 +8,10 @@ public class Microscope extends InheritanceEPpt1LabEquipment {
     public Microscope(String manufacturer, String model, int year, int magnification) {
         super(manufacturer, model, year);
         setMagnification(magnification);
+    }
+    public Microscope(Microscope source){
+        super(source);
+        setMagnification(source.getMagnification());
     }
 
     public int getMagnification() {
@@ -19,6 +23,11 @@ public class Microscope extends InheritanceEPpt1LabEquipment {
             throw new IllegalArgumentException("Magnification must be greater than or equal to the minimum magnification.");
         }
         this.magnification = magnification;
+    }
+
+    @Override
+    public LabEquipment clone() {
+        return new Microscope(this);
     }
 
     @Override
