@@ -1,10 +1,10 @@
 import java.time.LocalDate;
 
-public class Payment {
+public class WorkBook131StarterPayment {
     private LocalDate date;
     private double amount;
   
-    public Payment(LocalDate date, double amount) {
+    public WorkBook131StarterPayment(LocalDate date, double amount) {
       this.date = date;
       this.amount = amount;
     }

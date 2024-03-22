@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 
-public class Main {
+public class Marie {
     public static void main(String[] args) {
 
         List<String> facts = Arrays.asList(
@@ -14,6 +14,10 @@ public class Main {
             "Her legacy lives on through the Marie Curie Cancer Care charity, which provides care and support to people with terminal illnesses.",
             "Curie's contributions to science and medicine have been recognized and celebrated worldwide."
         );
-        
+
+        facts.forEach( fact -> {
+            System.out.println(fact);
+        });
+
     }
 }
