@@ -16,6 +16,7 @@ public class PutCoffeeRatings {
         coffeeRatings.put("Verve Coffee Roasters El Salvador Finca Kilimanjaro", 9);
         
         System.out.println("\nMenu\n-------");
+        coffeeRatings.forEach((key,value) -> System.out.println("Coffee " + key + " Rating " + value));
 
     }
 }
